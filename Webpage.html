@@ -57,7 +57,7 @@
             padding: 16px;
             margin: 16px;
             width: 300px;
-          
+
         }
 
 
@@ -101,10 +101,16 @@
         }
 
         #caffeine,
-        #nalt {
+        #nalt,
+        #cdp, #theanine ,
+        #ps {
             margin-bottom: 40px;
             height: 200px;
 
+        }
+
+        #cdp, #theanine, #ps  {
+            width: 300px;
         }
 
         #overlay {
@@ -133,7 +139,7 @@
             display: none;
         }
 
-        
+
         .trigger {
             display: flex;
             align-items: center;
@@ -173,8 +179,6 @@
                 </div>
                 <div class="trigger" data-popup-id="popup1">Open Popup 1</div>
                 <div id="popup1" class="popup-text">Full text of Popup 1</div>
-
-
             </div>
 
             <div class="card">
@@ -184,24 +188,72 @@
 
                 <div id="overlay">
                     <div id="popup">
-                      <div id="popup-content"></div>
-                      <button id="close-button">Close</button>
+                        <div id="popup-content"></div>
+                        <button id="close-button">Close</button>
                     </div>
-                  </div>
+                </div>
 
-                  <div class="trigger" data-popup-id="popup2">Open Popup 2</div>
-                  <div id="popup2" class="popup-text">Full text of Popup 2</div>
+                <div class="trigger" data-popup-id="popup2">Open Popup 2</div>
+                <div id="popup2" class="popup-text">Full text of Popup 2</div>
+            </div>
 
+            <div class="card">
+                <h3><u>CDP-Choline</u></h3>
 
+                <img id="cdp" src="./images/CDP.png" alt="Caffeine Chemical Structure">
 
+                <div id="overlay">
+                    <div id="popup">
+                        <div id="popup-content"></div>
+                        <button id="close-button">Close</button>
+                    </div>
+                </div>
+
+                <div class="trigger" data-popup-id="popup3">Open Popup 3</div>
+                <div id="popup3" class="popup-text">Full text of Popup 3</div>
+            </div>
+
+            <div class="card">
+    
+                <h3><u>L-Theanine</u></h3>
+
+                <img id="theanine" src="./images/L-Theanine.png" alt="Caffeine Chemical Structure">
+
+                <div id="overlay">
+                    <div id="popup">
+                        <div id="popup-content"></div>
+                        <button id="close-button">Close</button>
+                    </div>
+                </div>
+
+                <div class="trigger" data-popup-id="popup4">Open Popup 3</div>
+                <div id="popup4" class="popup-text">Full text of Popup 3</div>
+            </div>
+
+            <div class="card">
+    
+                <h3><u>Phosphatidylserine</u></h3>
+
+                <img id="ps" src="./images/Phosphatidylserine.png" alt="Caffeine Chemical Structure">
+
+                <div id="overlay">
+                    <div id="popup">
+                        <div id="popup-content"></div>
+                        <button id="close-button">Close</button>
+                    </div>
+                </div>
+
+                <div class="trigger" data-popup-id="popup5">Open Popup 3</div>
+                <div id="popup5" class="popup-text">Full text of Popup 3</div>
             </div>
 
 
 
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
+
+
+
+
+
         </div>
     </div>
     <div class="footer">
@@ -229,14 +281,14 @@
                 var popupText = document.getElementById(popupId);
                 popupContent.innerHTML = popupText.innerHTML;
                 overlay.style.display = "block";
-                
+
             });
         });
 
         overlay.addEventListener("click", function (e) {
             if (e.target === overlay) {
                 overlay.style.display = "none";
-               
+
             }
         });
 
