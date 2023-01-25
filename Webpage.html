@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jack Williamson 40365072</title>
     <style>
-       body {
+        body {
             font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
             margin: 0;
             min-height: 100vh;
@@ -159,6 +159,7 @@
     <div id="content">
 
         <div class="container">
+
             <div class="card">
                 <h3><u>Caffeine</u></h3>
 
@@ -194,13 +195,14 @@
 
 
             </div>
-            <div class="card">Hello World</div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
 
+
+
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
         </div>
-       
     </div>
     <div class="footer">
         Jack Williamson
@@ -209,8 +211,43 @@
             <a href="https://www.twitter.com/" target="_blank">Twitter</a>
             <a href="https://www.github.com/" target="_blank">GitHub</a>
         </div>
-</div>
+    </div>
 
+    <script defer>
+
+        var triggers = document.querySelectorAll(".trigger");
+        var overlay = document.getElementById("overlay");
+        var popup = document.getElementById("popup");
+        var popupContent = document.getElementById("popup-content");
+        var closeButton = document.getElementById("close-button");
+
+
+
+        triggers.forEach(function (trigger) {
+            trigger.addEventListener("click", function () {
+                var popupId = this.dataset.popupId;
+                var popupText = document.getElementById(popupId);
+                popupContent.innerHTML = popupText.innerHTML;
+                overlay.style.display = "block";
+                
+            });
+        });
+
+        overlay.addEventListener("click", function (e) {
+            if (e.target === overlay) {
+                overlay.style.display = "none";
+               
+            }
+        });
+
+        closeButton.addEventListener("click", function () {
+            overlay.style.display = "none";
+
+        });
+
+
+
+    </script>
 </body>
 
 </html>
