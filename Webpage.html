@@ -21,21 +21,28 @@
             flex: 1;
             display: flex;
         }
+        .container {
+            padding: 32px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
 
         .header {
             height: 72px;
             background: #1F2937;
-            color: white;
-            display: flex;
             align-items: center;
-            justify-content: space-between;
+            display: flex;
+            color: white;
             padding: 0 16px;
             font-size: 32px;
             font-weight: 900;
+            
         }
 
         .footer {
             height: 72px;
+            padding: 0 16px;
             background: #eee;
             color: black;
             display: flex;
@@ -47,6 +54,8 @@
 
 
         .card {
+            align-items: center;
+            justify-content: center;
             position: relative;
             display: flex;
             flex-direction: column;
@@ -56,7 +65,7 @@
             border-radius: 4px;
             padding: 16px;
             margin: 16px;
-            width: 300px;
+            width: 350px;
 
         }
 
@@ -80,11 +89,7 @@
 
         }
 
-        .container {
-            padding: 32px;
-            display: flex;
-            flex-wrap: wrap;
-        }
+       
 
         a:hover {
             text-decoration: underline;
@@ -102,14 +107,17 @@
 
         #caffeine,
         #nalt,
-        #cdp, #theanine ,
+        #cdp,
+        #theanine,
         #ps {
             margin-bottom: 40px;
             height: 200px;
 
         }
 
-        #cdp, #theanine, #ps  {
+        #cdp,
+        #theanine,
+        #ps {
             width: 300px;
         }
 
@@ -145,11 +153,53 @@
             align-items: center;
             justify-content: center;
             background-color: #e5e7eb;
-            width: 300px;
+            width: 350px;
             position: absolute;
             bottom: 0;
             padding: 16px;
         }
+
+        @media (max-width : 480px) {
+            .header {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+        }
+
+        .footer{
+            display: flex;
+            width: 100%;
+        }
+
+        .card{
+            display: flex;
+            
+        }
+
+        #caffeine,
+        #nalt,
+        #cdp,
+        #theanine,
+        #ps {
+            margin-bottom: 40px;
+            height: 150px;
+
+        }
+
+        #cdp,
+        #theanine,
+        #ps {
+           
+            width: 200px;
+        }
+
+        .trigger {
+            width: 250px;
+            border-radius: 32px;
+            margin-bottom: 8px;
+        }
+    }
     </style>
 
 
@@ -157,12 +207,13 @@
 
 <body>
 
-
     <div class="header">
         <div id="left">Nootropics</div>
 
     </div>
+
     <div id="content">
+
 
         <div class="container">
 
@@ -214,7 +265,7 @@
             </div>
 
             <div class="card">
-    
+
                 <h3><u>L-Theanine</u></h3>
 
                 <img id="theanine" src="./images/L-Theanine.png" alt="Caffeine Chemical Structure">
@@ -231,7 +282,7 @@
             </div>
 
             <div class="card">
-    
+
                 <h3><u>Phosphatidylserine</u></h3>
 
                 <img id="ps" src="./images/Phosphatidylserine.png" alt="Caffeine Chemical Structure">
