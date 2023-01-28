@@ -133,7 +133,7 @@
 
 
 
-    
+
         .trigger {
             color: #fff;
             display: flex;
@@ -198,20 +198,37 @@
             color: #333;
         }
 
-        .popup .close:hover {
-            color: #06D85F;
-        }
+      
 
         .popup .content {
             max-height: 30%;
             overflow: auto;
         }
 
-        #popup1,  #popup2,  #popup3,  #popup4,  #popup5 {
+        #popup1,
+        #popup2,
+        #popup3,
+        #popup4,
+        #popup5 {
             display: flex;
             align-items: center;
             justify-content: center;
         }
+
+        @media only screen and (max-width: 700px) {
+            .sidebar {
+                display: none;
+            }
+        }
+
+        .sidebar {
+            flex-shrink: 0;
+            width: 200px;
+            background: rgb(202, 202, 202);
+            padding-left: 16px;
+            padding-right: 20px;
+        }
+
 
 
         @media (max-width : 560px) {
@@ -221,10 +238,11 @@
                 justify-content: center;
                 width: 100%;
             }
-            
-         
+
+
 
             .footer {
+
                 display: flex;
                 width: 100%;
             }
@@ -253,6 +271,12 @@
 
 
         }
+
+        .side-text {
+            font-weight: 600;
+            font-size: 18px;
+            color: #000000;
+        }
     </style>
 
 
@@ -267,6 +291,26 @@
 
     <div id="content">
 
+        <div class="sidebar">
+            <h2>Quick Select</h2>
+            <ul>
+                <li>
+                    <a class="side-text" href="#popup1">Caffeine</a>
+                </li>
+                <li>
+                    <a class="side-text" href="#popup2">N-Acetyl-L-tyrosine</a>
+                </li>
+                <li>
+                    <a class="side-text" href="#popup3">CDP-Choline</a>
+                </li>
+                <li>
+                    <a class="side-text" href="#popup4">L-Theanine</a>
+                </li>
+                <li>
+                    <a class="side-text" href="#popup5">Phosphatidylserine</a>
+                </li>
+            </ul>
+        </div>
         <div class="container">
 
             <div class="card">
@@ -407,49 +451,51 @@
 
                 <img id="cdp" src="./images/CDP.png" alt="CDP-Choline Chemical Structure">
                 <a class="trigger" href="#popup3">Let me Pop up</a>
-  
+
 
                 <div id="popup3" class="overlay">
                     <div class="popup">
                         <h1>CDP-Choline</h1>
                         <a class="close" href="#">&times;</a>
                         <div class="content">
-            
+
                             <hr>
-                                <h2>How Does It Help</h2>
-                                <ul>
-                                    <li>
-                                        <b>Brain Optimization: </b><br>
-                                        CDP-Choline provides uridine once it enters in the brain. Uridine repairs, rebuilds and
-                                        re-supplies the components needed for neuron repair. To keep signaling between neurons
-                                        optimized for memory, learning, cognition and recall
-                                    </li>
-            
-                                    <li>
-                                        <b>Brain Energy:</b><br>
-                                        CDP-Choline increases  <i>Adenosine triphosphate (ATP)</i> in brain cells. ATP is
-                                        produced in your mitochondria and your main source of cellular energy.
-                                    </li>
-                                </ul>
-                                <br>
-                                <h2>CDP-Choline Recommended Dosage</h2>
-                                <ul>
-                                    <li>Recommended CDP-Choline dosage is 250 – 500 mg per day</li>
-                                </ul>
-                                <br>
-                                <h2>CDP-Choline Side Effects</h2>
-                                <table style="display: flex; justify-content: center;">
-                                    <tr>
-                                        <td>Toxicity with too much choline in your body</td>
-                                        <td>Trouble sleeping</td>
-                                        <td>Headache</td>
-                                    </tr>
-            
-                                </table>
-                                <cite><a href="https://nootropicsexpert.com/cdp-choline/" target="_blank">Ref</a></cite>
-            
-            
-                        
+                            <h2>How Does It Help</h2>
+                            <ul>
+                                <li>
+                                    <b>Brain Optimization: </b><br>
+                                    CDP-Choline provides uridine once it enters in the brain. Uridine repairs, rebuilds
+                                    and
+                                    re-supplies the components needed for neuron repair. To keep signaling between
+                                    neurons
+                                    optimized for memory, learning, cognition and recall
+                                </li>
+
+                                <li>
+                                    <b>Brain Energy:</b><br>
+                                    CDP-Choline increases  <i>Adenosine triphosphate (ATP)</i> in brain cells. ATP is
+                                    produced in your mitochondria and your main source of cellular energy.
+                                </li>
+                            </ul>
+                            <br>
+                            <h2>CDP-Choline Recommended Dosage</h2>
+                            <ul>
+                                <li>Recommended CDP-Choline dosage is 250 – 500 mg per day</li>
+                            </ul>
+                            <br>
+                            <h2>CDP-Choline Side Effects</h2>
+                            <table style="display: flex; justify-content: center;">
+                                <tr>
+                                    <td>Toxicity with too much choline in your body</td>
+                                    <td>Trouble sleeping</td>
+                                    <td>Headache</td>
+                                </tr>
+
+                            </table>
+                            <cite><a href="https://nootropicsexpert.com/cdp-choline/" target="_blank">Ref</a></cite>
+
+
+
                         </div>
                     </div>
                 </div>
@@ -461,53 +507,57 @@
 
                 <img id="theanine" src="./images/L-Theanine.png" alt="L-Theanine Chemical Structure">
 
-               
-  
-        <a class="trigger" href="#popup4">Click for details</a>
-  
 
-        <div id="popup4" class="overlay">
-            <div class="popup">
-                <h1>L-Theanine</h1>
-                <a class="close" href="#">&times;</a>
-                <div class="content">
-    
-                    <hr>
-                    <h2>How Does It Help</h2>
-                    <ul>
-                        <li>
-                            <b>Brain Waves: </b><br>
-                            L-Theanine boosts alpha brain waves (8-12Hz) promoting alert relaxation. And theta brain
-                            waves associated with creativity and relief from trauma..
-                        </li>
-    
-                        <li>
-                            <b>Neuroprotection: </b><br>
-                            L-Theanine is an agonist of NMDA receptors and can inhibit synaptic release of glutamate.
-                            Protecting your brain from over-stimulation caused by glutamate, and possible glutamate
-                            toxicity.
-                        </li>
-                    </ul>
-                    <br>
-                    <h2>L-Theanine Recommended Dosage</h2>
-                    <ul>
-                        <li>Recommended dosage of L-Theanine is 100 – 400 mg once or twice per day. With a maximum of
-                            1,200 mg per day</li>
-                    </ul>
-                    <br>
-                    <h2>L-Theanine Side Effects</h2>
-                    <table style="display: flex; justify-content: center;">
-                        <tr>
-                            <td>Decrease blood pressure</td>
-                        </tr>
-    
-                    </table>
-                    <cite><a href="https://nootropicsexpert.com/l-theanine/" target="_blank">Ref</a></cite>
-    
-                
+
+                <a class="trigger" href="#popup4">Click for details</a>
+
+
+                <div id="popup4" class="overlay">
+                    <div class="popup">
+                        <h1>L-Theanine</h1>
+                        <a class="close" href="#">&times;</a>
+                        <div class="content">
+
+                            <hr>
+                            <h2>How Does It Help</h2>
+                            <ul>
+                                <li>
+                                    <b>Brain Waves: </b><br>
+                                    L-Theanine boosts alpha brain waves (8-12Hz) promoting alert relaxation. And theta
+                                    brain
+                                    waves associated with creativity and relief from trauma..
+                                </li>
+
+                                <li>
+                                    <b>Neuroprotection: </b><br>
+                                    L-Theanine is an agonist of NMDA receptors and can inhibit synaptic release of
+                                    glutamate.
+                                    Protecting your brain from over-stimulation caused by glutamate, and possible
+                                    glutamate
+                                    toxicity.
+                                </li>
+                            </ul>
+                            <br>
+                            <h2>L-Theanine Recommended Dosage</h2>
+                            <ul>
+                                <li>Recommended dosage of L-Theanine is 100 – 400 mg once or twice per day. With a
+                                    maximum of
+                                    1,200 mg per day</li>
+                            </ul>
+                            <br>
+                            <h2>L-Theanine Side Effects</h2>
+                            <table style="display: flex; justify-content: center;">
+                                <tr>
+                                    <td>Decrease blood pressure</td>
+                                </tr>
+
+                            </table>
+                            <cite><a href="https://nootropicsexpert.com/l-theanine/" target="_blank">Ref</a></cite>
+
+
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
 
 
 
@@ -525,7 +575,7 @@
 
                 <img id="ps" src="./images/Phosphatidylserine.png" alt="Phosphatidylserine Chemical Structure">
                 <a class="trigger" href="#popup5">Click for details</a>
-  
+
 
                 <div id="popup5" class="overlay">
                     <div class="popup">
@@ -538,14 +588,17 @@
                                 <li>
                                     <b>Neuro-optimization: </b><br>
                                     Phosphatidylserine (PS) keeps brain cells fluid and permeable.
-                                    This neuroplasticity helps neurons form new connections needed for memory formation. PS is
-                                    integral to cleaning up damaged neurons and maintaining an optimized brain. And PS boosts
+                                    This neuroplasticity helps neurons form new connections needed for memory formation.
+                                    PS is
+                                    integral to cleaning up damaged neurons and maintaining an optimized brain. And PS
+                                    boosts
                                     mental energy by easing the flow of glucose and oxygen needed to power brain cells.
                                 </li>
-            
+
                                 <li>
                                     <b>Neurogenesis: </b><br>
-                                    Phosphatidylserine works in concert with the DHA in Omega-3’s and keeping brain cells
+                                    Phosphatidylserine works in concert with the DHA in Omega-3’s and keeping brain
+                                    cells
                                     optimized. Prolonging neuron survival and health.
                                 </li>
                             </ul>
@@ -562,11 +615,12 @@
                                     <td>Medications for Alzheimer’s may interact with Phosphatidylserine</td>
                                     <td>Stomach upset</td>
                                 </tr>
-            
+
                             </table>
                             <br>
-                            <cite><a href="https://nootropicsexpert.com/phosphatidylserine-ps/" target="_blank">Ref</a></cite>
-            
+                            <cite><a href="https://nootropicsexpert.com/phosphatidylserine-ps/"
+                                    target="_blank">Ref</a></cite>
+
                         </div>
                     </div>
                 </div>
