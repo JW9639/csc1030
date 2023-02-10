@@ -224,6 +224,10 @@
       font-weight: 500;
     }
 
+   #ps-popup-title-small{
+    display: none;
+   }
+
     @media (min-width: 0px) and (max-width: 340px) {
       .container {
         padding: 8px;
@@ -232,7 +236,7 @@
       .card {
         display: flex;
         justify-content: center;
-        width: 250px;
+        width: 200px;
         padding: 0px 16px 16px 16px;
         height: 250px;
       }
@@ -240,6 +244,22 @@
       .trigger {
         width: 200px;
       }
+
+      .popup {
+        width: 250px;
+      }
+
+      #ps-popup-title{
+        display: none;
+      }
+
+      #ps-popup-title-small{
+        display: inline-block;
+      }
+
+
+
+
     }
 
     @media (min-width: 340px) and (max-width: 420px) {
@@ -260,6 +280,19 @@
       .trigger {
         width: 250px;
       }
+
+      .popup {
+        width: 300px;
+      }
+
+      #ps-popup-title{
+        display: none;
+      }
+
+      #ps-popup-title-small{
+        display: inline-block;
+      }
+
     }
 
     @media (min-width: 420px)  and (max-width: 490px) {
@@ -274,6 +307,10 @@
 
       .trigger {
         width: 250px;
+      }
+
+      .popup {
+        width: 350px;
       }
     }
 
@@ -356,7 +393,7 @@
         <div id="popup1" class="overlay">
           <div class="popup">
             <h1>Caffeine</h1>
-            <a class="close" href="#">&times;</a>
+            <a class="close" href="">&times;</a>
             <div class="content">
               <hr />
               <h2>How Does It Help</h2>
@@ -384,23 +421,27 @@
               </ul>
               <br />
               <h2>Caffeine Side Effects</h2>
-              <table style="display: flex; justify-content: center">
-                <tr>
-                  <td>Breathing trouble</td>
-                  <td>Confusion</td>
-                  <td>Fainting</td>
-                </tr>
-                <tr>
-                  <td>Fever</td>
-                  <td>Hallucination</td>
-                  <td>Heart palpitation</td>
-                </tr>
-                <tr>
-                  <td>Restlessness</td>
-                  <td>Sweating</td>
-                  <td>Muscle tremors</td>
-                </tr>
-              </table>
+              <div id="caffeine-table">
+                <table style="display: flex; justify-content: center; flex-wrap: wrap;">
+                  <tr>
+                    <td>Breathing trouble</td>
+                    <td>Confusion</td>
+                    <td>Fainting</td>
+                  </tr>
+                  <tr>
+                    <td>Fever</td>
+                    <td>Hallucination</td>
+                    <td>Heart palpitation</td>
+                  </tr>
+                  <tr>
+                    <td>Restlessness</td>
+                    <td>Sweating</td>
+                    <td>Muscle tremors</td>
+                  </tr>
+                </table>
+              </div>
+             
+             
               <cite><a href="https://nootropicsexpert.com/caffeine/" target="_blank">Ref</a></cite>
             </div>
           </div>
@@ -417,7 +458,7 @@
         <div id="popup2" class="overlay">
           <div class="popup">
             <h1>N-Acetyl-L-tyrosine</h1>
-            <a class="close" href="#">&times;</a>
+            <a class="close" href="">&times;</a>
             <div class="content">
               <hr />
               <h2>How Does It Help</h2>
@@ -474,7 +515,7 @@
         <div id="popup3" class="overlay">
           <div class="popup">
             <h1>CDP-Choline</h1>
-            <a class="close" href="#">&times;</a>
+            <a class="close" href="">&times;</a>
             <div class="content">
               <hr />
               <h2>How Does It Help</h2>
@@ -527,7 +568,7 @@
         <div id="popup4" class="overlay">
           <div class="popup">
             <h1>L-Theanine</h1>
-            <a class="close" href="#">&times;</a>
+            <a class="close" href="">&times;</a>
             <div class="content">
               <hr />
               <h2>How Does It Help</h2>
@@ -569,15 +610,16 @@
       </div>
 
       <div class="card">
-        <h3><u>Phosphatidylserine</u></h3>
+        <h3 id="ps-card-title"><u>Phosphatidylserine</u></h3>
 
         <img id="ps" src="./images/Phosphatidylserine.png" alt="Phosphatidylserine Chemical Structure" />
         <a class="trigger" href="#popup5">Click for details</a>
 
         <div id="popup5" class="overlay">
           <div class="popup">
-            <h1>Phosphatidylserine</h1>
-            <a class="close" href="#">&times;</a>
+            <h1 id="ps-popup-title">Phosphatidylserine</h1>
+            <h1 id="ps-popup-title-small">PS</h1>
+            <a class="close" href="">&times;</a>
             <div class="content">
               <hr />
               <h2>How Does It Help</h2>
